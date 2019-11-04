@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Fokin
+Build-Jdk: 11.0.4
+Implementation-Title: routine-planner-back
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.itlbv
+Main-Class: ${start-class}
+
