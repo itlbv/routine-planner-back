@@ -23,7 +23,9 @@ public class UserService {
     }
 
     public void update(User user) {
-        repository.save(user);
+        if (repository.save(user) == null) {
+            throw new NotFoundException("Failed updating user with id=" + user.getId());
+        }
     }
 
     public void delete(int id) throws NotFoundException {
