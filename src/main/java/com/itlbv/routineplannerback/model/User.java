@@ -14,14 +14,16 @@ public class User extends AbstractEntity {
     public User() {
     }
 
-    public User(Integer id, String name, String email) {
+    public User(Integer id, String name, String lastName, String email) {
         super(id, name);
+        this.lastName = lastName;
         this.email = email;
         this.registrationDateTime = LocalDateTime.now();
     }
 
-    public User(Integer id, String name, String email, LocalDateTime registrationDateTime) {
+    public User(Integer id, String name, String lastName, String email, LocalDateTime registrationDateTime) {
         super(id, name);
+        this.lastName = lastName;
         this.email = email;
         this.registrationDateTime = registrationDateTime;
     }

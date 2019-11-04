@@ -34,6 +34,7 @@ public class JdbcConversionUtil {
     public static User convertToUser(JdbcUser jdbcUser) {
         return new User(jdbcUser.getId(),
                 jdbcUser.getName(),
+                jdbcUser.getLastName(),
                 jdbcUser.getEmail(),
                 convertTimestampToLocalDateTime(jdbcUser.getRegDateTime()));
     }

@@ -43,6 +43,7 @@ public class JdbcUserRepository implements UserRepository {
         MapSqlParameterSource map = new MapSqlParameterSource()
                 .addValue("id", user.getId())
                 .addValue("name", user.getName())
+                .addValue("last_name", user.getLastName())
                 .addValue("email", user.getEmail())
                 .addValue("reg_date_time", formatDate(user.getRegistrationDateTime()));
         if (user.isNew()) {
@@ -51,6 +52,7 @@ public class JdbcUserRepository implements UserRepository {
         } else if (namedParameterJdbcTemplate.update(
                 "UPDATE users" +
                         " SET name = :name," +
+                        " last_name =:last_name, " +
                         " email = :email," +
                         " reg_date_time = :reg_date_time" +
                         " WHERE id = :id", map) == 0) {
