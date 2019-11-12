@@ -69,8 +69,8 @@ public class Routine extends AbstractEntity {
     public String toString() {
         return "Routine{" +
                 "id=" + getId() +
-                "name='" + getName() + '\'' +
-                "description='" + description + '\'' +
+                ", name='" + getName() + '\'' +
+                ", description='" + description + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", timeOfDay=" + timeOfDay +
