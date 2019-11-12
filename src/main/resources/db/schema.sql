@@ -21,7 +21,7 @@ CREATE TABLE routines
     name        VARCHAR NOT NULL,
     description VARCHAR,
     start_date  DATE    NOT NULL,
-    end_date    DATE    NOT NULL,
+    end_date    DATE,
     time_of_day TIME    NOT NULL,
     period      INTERVAL,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
