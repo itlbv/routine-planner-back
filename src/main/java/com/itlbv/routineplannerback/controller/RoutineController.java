@@ -25,8 +25,8 @@ public class RoutineController {
 
     @PostMapping
     void create(@RequestBody Routine routine) {
-        log.info("create " + routine.toString());
         service.create(routine, SecurityUtil.USER_01_ID);
+        log.info("create " + routine.toString());
     }
 
     @PutMapping("/{id}")
